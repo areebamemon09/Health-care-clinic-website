@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Surgery Services - Healthcare</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    /* ================= GLOBAL ================= */
+    body {
+      background: #f8f9fa;
+      font-family: Arial, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* ================= TOPBAR ================= */
+    .topbar {
+      background: #111827;
+      padding: 6px 0;
+      font-size: 14px;
+    }
+
+    .topbar i,
+    .topbar a,
+    .topbar span {
+      color: #cbd5e1;
+      transition: 0.3s;
+    }
+
+    .topbar a:hover {
+      color: #0d6efd;
+    }
+
+    /* ================= NAVBAR ================= */
+    .branding {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      background: #fff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .navmenu a {
+      text-decoration: none;
+      font-weight: 500;
+      color: #333;
+      transition: 0.3s;
+    }
+
+    .navmenu a:hover {
+      color: #0d6efd;
+    }
+
+    /* ================= HERO ================= */
+    .hero {
+      background: linear-gradient(135deg, #0d6efd, #1e40af);
+      color: white;
+      text-align: center;
+      padding: 90px 20px;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      font-weight: 800;
+    }
+
+    .hero p {
+      opacity: 0.9;
+    }
+
+    /* ================= SECTION TITLE ================= */
+    .section-title {
+      text-align: center;
+      font-weight: 700;
+      margin: 50px 0 30px;
+    }
+
+    /* ================= SERVICE CARD ================= */
+    .service-card {
+      background: white;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+      transition: 0.3s;
+      height: 100%;
+      text-align: center;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .icon {
+      font-size: 40px;
+      color: #0d6efd;
+      margin-bottom: 10px;
+    }
+
+    /* ================= WHY SECTION ================= */
+    .why {
+      background: white;
+      padding: 60px 20px;
+      margin-top: 50px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    }
+
+    .why i {
+      font-size: 32px;
+      color: #0d6efd;
+    }
+
+    /* ================= CTA ================= */
+    .cta {
+      background: linear-gradient(135deg, #111827, #1f2937);
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+      margin-top: 50px;
+      border-radius: 12px;
+    }
+
+    /* ================= FOOTER ================= */
+    .footer {
+      background: #111827;
+      color: #cbd5e1;
+      padding: 50px 0 20px;
+      margin-top: 40px;
+    }
+
+    .footer h6 {
+      color: #fff;
+    }
+
+    .footer a {
+      color: #cbd5e1;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .footer a:hover {
+      color: #0d6efd;
+    }
+
+    .bottom {
+      text-align: center;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      margin-top: 20px;
+      padding-top: 15px;
+      font-size: 13px;
+    }
+
+    /* ================= SCROLL TOP ================= */
+    #topBtn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #0d6efd;
+      color: white;
+      border: none;
+      padding: 10px 14px;
+      border-radius: 50%;
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ================= TOPBAR ================= -->
+<div class="topbar">
+  <div class="container d-flex justify-content-between">
+
+    <div>
+      <i class="bi bi-envelope"></i>
+      <a href="mailto:info@healthcare.com">info@healthcare.com</a>
+      <span class="ms-3">📞 +92 300 1234567</span>
+    </div>
+
+    <div>
+      <a href="#"><i class="bi bi-facebook me-2"></i></a>
+      <a href="#"><i class="bi bi-instagram me-2"></i></a>
+      <a href="#"><i class="bi bi-linkedin"></i></a>
+    </div>
+
+  </div>
+</div>
+
+<!-- ================= NAVBAR ================= -->
+<div class="branding">
+  <div class="container d-flex justify-content-between align-items-center py-2">
+
+    <a href="index.html" class="d-flex align-items-center text-decoration-none">
+      <img src="assets/img/healthcare-medical-logo-icon-for-ambulance-hospital-pharmacy-symbol-vector-removebg-preview.png" style="height:50px; margin-right:10px;">
+      <h4 class="m-0">Healthcare</h4>
+    </a>
+
+    <nav class="navmenu">
+      <ul class="d-flex list-unstyled gap-4 m-0">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Surgery Services</a></li>
+        <li><a href="doctors.html">Doctors</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+  </div>
+</div>
+
+<!-- ================= HERO ================= -->
+<section class="hero" data-aos="fade-down">
+  <h1>Surgery Services</h1>
+  <p>Safe & Advanced Surgical Care by Expert Doctors</p>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<div class="container">
+
+  <h3 class="section-title" data-aos="fade-up">Our Specialties</h3>
+
+  <div class="row g-4">
+
+    <div class="col-md-4" data-aos="fade-up">
+      <div class="service-card">
+        <div class="icon"><i class="bi bi-heart-pulse"></i></div>
+        <h5>Cardiac Surgery</h5>
+        <p>Heart bypass and valve treatments with modern care.</p>
+      </div>
+    </div>
+
+    <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+      <div class="service-card">
+        <div class="icon"><i class="bi bi-bandaid"></i></div>
+        <h5>General Surgery</h5>
+        <p>Safe and reliable treatments for common issues.</p>
+      </div>
+    </div>
+
+    <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+      <div class="service-card">
+        <div class="icon"><i class="bi bi-person-wheelchair"></i></div>
+        <h5>Orthopedic Surgery</h5>
+        <p>Bone and joint surgeries with advanced tools.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ================= WHY SECTION ================= -->
+<div class="container why" data-aos="fade-up">
+
+  <h3 class="text-center mb-4">Why Choose Us?</h3>
+
+  <div class="row text-center g-4">
+
+    <div class="col-md-4">
+      <i class="bi bi-shield-check"></i>
+      <h5 class="mt-2">Safe Treatment</h5>
+      <p>International safety standards.</p>
+    </div>
+
+    <div class="col-md-4">
+      <i class="bi bi-people"></i>
+      <h5 class="mt-2">Expert Doctors</h5>
+      <p>Highly qualified surgical team.</p>
+    </div>
+
+    <div class="col-md-4">
+      <i class="bi bi-clock"></i>
+      <h5 class="mt-2">24/7 Support</h5>
+      <p>Emergency care anytime.</p>
+    </div>
+
+  </div>
+</div>
+
+<!-- ================= CTA ================= -->
+<div class="cta" data-aos="fade-up">
+  <h3>Need Consultation?</h3>
+  <p>Book appointment with our surgeons</p>
+  <a href="appointment.html" class="btn btn-primary mt-2">Book Now</a>
+</div>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="container row">
+
+    <div class="col-md-5">
+      <h6>Healthcare</h6>
+      <p>Trusted medical care in Karachi.</p>
+    </div>
+
+    <div class="col-md-3">
+      <h6>Services</h6>
+      <a href="#">Surgery</a>
+      <a href="#">Emergency</a>
+    </div>
+
+    <div class="col-md-3">
+      <h6>Support</h6>
+      <a href="#">Contact</a>
+      <a href="#">Help</a>
+    </div>
+
+  </div>
+
+  <div class="bottom">
+    © 2026 Healthcare | All Rights Reserved
+  </div>
+</footer>
+
+<!-- SCROLL TOP -->
+<button id="topBtn" onclick="window.scrollTo({top:0, behavior:'smooth'})">
+  <i class="bi bi-arrow-up"></i>
+</button>
+
+<!-- ================= SCRIPTS ================= -->
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+  AOS.init({ duration: 700, once: true });
+
+  window.onscroll = function () {
+    let btn = document.getElementById("topBtn");
+    btn.style.display = (document.documentElement.scrollTop > 200) ? "block" : "none";
+  };
+</script>
+
+</body>
+</html>

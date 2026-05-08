@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Emergency Care - Healthcare</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- AOS Animation -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f5f9ff;
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
+      body {
+  padding-top: 100px; /* navbar height ke barabar space */
+}
+    }
+
+    header.header {
+  margin-bottom: 20px; /* gap below navbar */
+}
+
+    .navbar {
+  backdrop-filter: blur(10px);
+}
+
+.nav-link {
+  font-weight: 600;
+  color: #0d1b2a !important;
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  color: #dc3545 !important;
+}
+
+.dropdown-menu {
+  border-radius: 12px;
+}
+
+    /* ===== HERO ===== */
+    .emergency-hero {
+      background:
+        linear-gradient(rgba(0, 0, 0, 0.65),
+          rgba(0, 0, 0, 0.65)),
+        url('https://images.unsplash.com/photo-1587351021759-3e566b6af7cc?q=80&w=1600');
+      background-size: cover;
+      background-position: center;
+      min-height: 90vh;
+      align-items: center;
+      position: relative;
+      color: white;
+      padding: 120px 0;
+    }
+
+    .hero-content h1 {
+      font-size: 70px;
+      font-weight: 800;
+      margin-bottom: 20px;
+      animation: fadeDown 1s ease;
+    }
+
+    .hero-content p {
+      font-size: 22px;
+      max-width: 700px;
+      line-height: 1.8;
+      margin-bottom: 30px;
+    }
+
+    /* ===== BUTTON ===== */
+    .emergency-btn {
+      background: #dc3545;
+      border: none;
+      padding: 16px 40px;
+      border-radius: 50px;
+      font-size: 20px;
+      font-weight: 700;
+      color: white;
+      transition: 0.4s;
+      text-decoration: none;
+      display: inline-block;
+      animation: pulse 1.5s infinite;
+    }
+
+    .emergency-btn:hover {
+      transform: scale(1.08);
+      background: #bb2d3b;
+    }
+
+    /* ===== ALERT BOX ===== */
+    .emergency-alert {
+      background: white;
+      padding: 25px;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+      margin-top: -80px;
+      position: relative;
+      z-index: 10;
+    }
+
+    .emergency-alert h3 {
+      color: #dc3545;
+      font-weight: 700;
+    }
+
+    /* ===== FEATURES ===== */
+    .feature-card {
+      background: white;
+      border-radius: 20px;
+      padding: 35px;
+      transition: 0.4s;
+      height: 100%;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+      border: 1px solid #eee;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(220, 53, 69, 0.18);
+    }
+
+    .feature-icon {
+      width: 80px;
+      height: 80px;
+      background: #ffe5e8;
+      color: #dc3545;
+      font-size: 35px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      animation: pulse 2s infinite;
+    }
+
+    /* ===== SECTION TITLE ===== */
+    .section-title {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-title h2 {
+      font-size: 45px;
+      font-weight: 800;
+      color: #0d1b2a;
+    }
+
+    .section-title p {
+      color: #666;
+      font-size: 18px;
+    }
+
+    /* ===== TEAM ===== */
+    .team-box {
+      background: linear-gradient(135deg, #dc3545, #ff6b6b);
+      border-radius: 25px;
+      padding: 60px;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .team-box::before {
+      content: "";
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 50%;
+      top: -100px;
+      right: -100px;
+    }
+
+    .team-box h2 {
+      font-size: 45px;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    .team-box p {
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    .dark-footer{
+  background:#0f172a;
+  color:white;
+  margin-top:80px;
+  padding-top:60px;
+}
+
+.footer-nav p{
+  color:#cbd5e1;
+  margin-bottom:12px;
+  transition:0.3s;
+  cursor:default;
+}
+
+.footer-nav p:hover{
+  color:#0d6efd;
+  transform:translateX(5px);
+}
+
+.brand-description{
+  color:#cbd5e1;
+  line-height:1.8;
+}
+
+.contact-item{
+  color:#cbd5e1;
+  margin-bottom:10px;
+}
+
+.contact-item i{
+  color:#0d6efd;
+  margin-right:8px;
+}
+
+.dark-footer-bottom{
+  border-top:1px solid rgba(255,255,255,0.1);
+  padding:20px 0;
+  margin-top:30px;
+}
+
+.legal-links a{
+  color:#cbd5e1;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.legal-links a:hover{
+  color:#0d6efd;
+}
+  
+    /* ===== ANIMATIONS ===== */
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.08);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    @keyframes fadeDown {
+      from {
+        opacity: 0;
+        transform: translateY(-40px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media(max-width:768px) {
+
+      .hero-content h1 {
+        font-size: 45px;
+      }
+
+      .hero-content p {
+        font-size: 18px;
+      }
+
+      .team-box {
+        padding: 40px 25px;
+      }
+
+      .team-box h2 {
+        font-size: 35px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header id="header" class="header fixed-top shadow-sm">
+
+  <!-- Top Bar -->
+  <div class="topbar bg-primary text-white py-2">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap">
+
+      <div class="contact-info d-flex gap-3 flex-wrap">
+        <span><i class="bi bi-envelope me-1"></i> contact@example.com</span>
+        <span><i class="bi bi-phone me-1"></i> +92 300 1234567</span>
+      </div>
+
+      <div class="social-links d-flex gap-3">
+        <a href="#" class="text-white"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="text-white"><i class="bi bi-twitter-x"></i></a>
+        <a href="#" class="text-white"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="text-white"><i class="bi bi-linkedin"></i></a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-xl bg-white py-3">
+
+    <div class="container">
+
+      <!-- Logo -->
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="assets/img/healthcare-medical-logo-icon-for-ambulance-hospital-pharmacy-symbol-vector-removebg-preview.png" style="height:55px;" class="me-2">
+        <span class="fw-bold fs-4 text-primary">Healthcare</span>
+      </a>
+
+      <!-- Toggle -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Menu -->
+      <div class="collapse navbar-collapse" id="mainNav">
+
+        <ul class="navbar-nav ms-auto gap-2">
+
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="departments.html">Departments</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="doctors.html">Doctors</a></li>
+
+          <!-- Services Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+              Services
+            </a>
+            <ul class="dropdown-menu shadow border-0">
+              <li><a class="dropdown-item" href="general-checkup.html">General Checkup</a></li>
+              <li><a class="dropdown-item text-danger fw-bold" href="emergency-care.html">Emergency Care</a></li>
+              <li><a class="dropdown-item" href="surgery.html">Surgery</a></li>
+              <li><a class="dropdown-item" href="diagnostic-tests.html">Diagnostics</a></li>
+            </ul>
+          </li>
+
+          <!-- Pages Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+              More Pages
+            </a>
+            <ul class="dropdown-menu shadow border-0">
+              <li><a class="dropdown-item" href="appointment.html">Appointment</a></li>
+              <li><a class="dropdown-item" href="gallery.html">Gallery</a></li>
+              <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+              <li><a class="dropdown-item" href="contact.html">Contact</a></li>
+            </ul>
+          </li>
+
+        </ul>
+
+        <!-- Emergency Button -->
+        <a href="tel:+155895548855" class="btn btn-danger ms-xl-3 px-4 rounded-pill fw-bold">
+          <i class="bi bi-telephone-fill me-1"></i> Emergency
+        </a>
+
+      </div>
+
+    </div>
+  </nav>
+
+</header>
+
+  <!-- HERO -->
+  <section class="emergency-hero">
+
+    <div class="container">
+
+      <div class="hero-content" data-aos="fade-right">
+
+        <h1>24/7 Emergency Care</h1>
+
+        <p>
+          Fast emergency response with highly trained doctors,
+          advanced ICU support, trauma specialists,
+          and life-saving medical technology available anytime.
+        </p>
+
+        <a href="tel:+155895548855" class="emergency-btn">
+          <i class="bi bi-telephone-fill"></i>
+          Call Emergency Now
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ALERT -->
+  <section class="container">
+
+    <div class="emergency-alert" data-aos="zoom-in">
+
+      <h3>
+        ⚠ Emergency Services Available 24/7
+      </h3>
+
+      <p class="mb-0 mt-3">
+        Our rapid emergency response team is always ready to provide
+        immediate treatment for critical medical conditions.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- SERVICES -->
+  <section class="py-5">
+
+    <div class="container">
+
+      <div class="section-title" data-aos="fade-up">
+        <h2>What We Handle</h2>
+        <p>Critical emergency treatments with advanced care support</p>
+      </div>
+
+      <div class="row g-4">
+
+        <div class="col-md-6 col-lg-3" data-aos="zoom-in">
+          <div class="feature-card">
+
+            <div class="feature-icon">
+              <i class="bi bi-hospital"></i>
+            </div>
+
+            <h4>Trauma Cases</h4>
+
+            <p>
+              Immediate treatment for accidents and serious injuries.
+            </p>
+
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3" data-aos="zoom-in">
+          <div class="feature-card">
+
+            <div class="feature-icon">
+              <i class="bi bi-heart-pulse-fill"></i>
+            </div>
+
+            <h4>Heart Attack</h4>
+
+            <p>
+              Advanced cardiac emergency support and ICU monitoring.
+            </p>
+
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3" data-aos="zoom-in">
+          <div class="feature-card">
+
+            <div class="feature-icon">
+              <i class="bi bi-activity"></i>
+            </div>
+
+            <h4>Stroke Emergency</h4>
+
+            <p>
+              Immediate neurological care and emergency response.
+            </p>
+
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3" data-aos="zoom-in">
+          <div class="feature-card">
+
+            <div class="feature-icon">
+              <i class="bi bi-shield-plus"></i>
+            </div>
+
+            <h4>Critical Support</h4>
+
+            <p>
+              Life-saving medical support with modern ICU facilities.
+            </p>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- TEAM -->
+  <section class="container mt-5">
+
+    <div class="team-box" data-aos="fade-up">
+
+      <h2>Fast Response Team</h2>
+
+      <p>
+        Our emergency medical team responds within minutes using
+        advanced ambulance systems, modern life-saving equipment,
+        and expert doctors trained for critical situations.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+ <footer id="footer" class="footer-16 footer position-relative dark-footer">
+
+  <div class="container">
+
+    <div class="footer-main" data-aos="fade-up" data-aos-delay="100">
+
+      <div class="row align-items-start g-5">
+
+        <!-- Brand Section -->
+        <div class="col-lg-5">
+          <div class="brand-section">
+
+            <a href="index.html" class="logo d-flex align-items-center mb-4 text-decoration-none">
+              <h2 class="text-white fw-bold m-0">Healthcare</h2>
+            </a>
+
+            <p class="brand-description">
+              Providing trusted medical care with advanced technology,
+              expert doctors, and 24/7 emergency support for patients and families.
+            </p>
+
+            <div class="contact-info mt-4">
+
+              <div class="contact-item mb-3">
+                <i class="bi bi-geo-alt-fill"></i>
+                <span> Karachi, Sindh, Pakistan</span>
+              </div>
+
+              <div class="contact-item mb-3">
+                <i class="bi bi-telephone-fill"></i>
+                <span> +92 300 1234567</span>
+              </div>
+
+              <div class="contact-item">
+                <i class="bi bi-envelope-fill"></i>
+                <span> info@healthcare.com</span>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+        <!-- About -->
+        <div class="col-6 col-lg-2">
+          <div class="nav-column">
+
+            <h5>About</h5>
+
+            <div class="footer-nav">
+              <p>Our Mission</p>
+              <p>Doctors</p>
+              <p>Facilities</p>
+              <p>Care Quality</p>
+              <p>Reviews</p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Services -->
+        <div class="col-6 col-lg-2">
+          <div class="nav-column">
+
+            <h5>Services</h5>
+
+            <div class="footer-nav">
+              <p>Checkup</p>
+              <p>Emergency</p>
+              <p>Surgery</p>
+              <p>Diagnostics</p>
+              <p>Pediatrics</p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Emergency -->
+        <div class="col-6 col-lg-3">
+          <div class="nav-column">
+
+            <h5>Emergency</h5>
+
+            <div class="footer-nav">
+              <p>Call Emergency</p>
+              <p>Book Appointment</p>
+              <p>Find Hospital</p>
+              <p>24/7 Support</p>
+              <p>Help Desk</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bottom -->
+  <div class="footer-bottom dark-footer-bottom">
+
+    <div class="container">
+
+      <div class="bottom-content" data-aos="fade-up" data-aos-delay="300">
+
+        <div class="row align-items-center">
+
+          <div class="col-lg-6">
+
+            <div class="copyright">
+              <p class="mb-0 text-light">
+                © 2026 <span class="fw-bold">Healthcare</span>. All Rights Reserved.
+              </p>
+            </div>
+
+          </div>
+
+          <div class="col-lg-6">
+
+            <div class="legal-links text-lg-end mt-3 mt-lg-0">
+
+              <a href="#!">Privacy Policy</a>
+              <a href="#!" class="ms-3">Terms</a>
+              <a href="#!" class="ms-3">Emergency Policy</a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+  <!-- Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- AOS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  const toggle = document.querySelector('.mobile-nav-toggle');
+  const menu = document.querySelector('.navmenu ul');
+
+  toggle.addEventListener('click', () => {
+    menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+  });
+  </script>
+
+</body>
+
+</html>

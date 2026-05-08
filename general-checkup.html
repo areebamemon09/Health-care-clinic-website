@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>General Checkup - Healthcare</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+  <!-- AOS ANIMATION -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body>
+
+<header id="header" class="header fixed-top">
+
+  <!-- TOP BAR -->
+  <div class="topbar d-flex align-items-center dark-background">
+    <div class="container d-flex justify-content-between align-items-center">
+
+      <div class="contact-info d-flex align-items-center gap-3">
+        <i class="bi bi-envelope d-flex align-items-center">
+          <a href="mailto:contact@example.com">contact@example.com</a>
+        </i>
+
+        <i class="bi bi-phone d-flex align-items-center ms-3">
+          <span>+1 5589 55488 55</span>
+        </i>
+      </div>
+
+      <div class="social-links d-none d-md-flex align-items-center gap-3">
+        <a href="#"><i class="bi bi-twitter-x"></i></a>
+        <a href="#"><i class="bi bi-facebook"></i></a>
+        <a href="#"><i class="bi bi-instagram"></i></a>
+        <a href="#"><i class="bi bi-linkedin"></i></a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- BRAND + NAV -->
+  <div class="branding d-flex align-items-center bg-white shadow-sm">
+
+    <div class="container d-flex align-items-center justify-content-between py-2">
+
+      <!-- LOGO -->
+      <a href="index.html" class="d-flex align-items-center text-decoration-none">
+
+        <img src="assets/img/healthcare-medical-logo-icon-for-ambulance-hospital-pharmacy-symbol-vector-removebg-preview.png"
+             alt="Logo"
+             style="height:60px; margin-right:10px;">
+
+        <h2 class="m-0 text-primary fw-bold">Healthcare</h2>
+      </a>
+
+      <!-- NAV -->
+      <nav id="navmenu" class="navmenu">
+
+        <ul class="d-flex align-items-center gap-4 list-unstyled m-0">
+
+          <!-- HOME -->
+          <li><a href="index.html" class="text-decoration-none">Home</a></li>
+
+          <!-- ABOUT -->
+          <li><a href="about.html" class="text-dark text-decoration-none">About</a></li>
+
+          <!-- SERVICES (MAIN CLINIC SERVICES) -->
+          <li class="dropdown">
+            <a href="#" class="text-dark text-decoration-none">
+              Services <i class="bi bi-chevron-down"></i>
+            </a>
+            <ul class="dropdown-menu shadow p-2">
+              <li><a href="general-checkup.html" class="active">General Checkup</a></li>
+              <li><a href="emergency-care.html">Emergency Care</a></li>
+              <li><a href="surgery.html">Surgery Services</a></li>
+              <li><a href="diagnostic-tests.html">Diagnostic Tests</a></li>
+              <li><a href="pediatrics.html">Pediatrics</a></li>
+              <li><a href="dental-care.html">Dental Care</a></li>
+            </ul>
+          </li>
+
+          <!-- DEPARTMENTS -->
+          <li class="dropdown">
+            <a href="#" class="text-dark text-decoration-none">
+              Departments <i class="bi bi-chevron-down"></i>
+            </a>
+            <ul class="dropdown-menu shadow p-2">
+              <li><a href="#">Cardiology</a></li>
+              <li><a href="#">Neurology</a></li>
+              <li><a href="#">Orthopedics</a></li>
+            </ul>
+          </li>
+
+          <!-- DOCTORS -->
+          <li><a href="doctors.html" class="text-dark text-decoration-none">Doctors</a></li>
+
+          <!-- APPOINTMENT (IMPORTANT MEDICAL CTA) -->
+          <li><a href="appointment.html" class="text-dark text-decoration-none">Appointment</a></li>
+
+          <!-- MORE PAGES -->
+          <li class="dropdown">
+            <a href="#" class="text-dark text-decoration-none">
+              More <i class="bi bi-chevron-down"></i>
+            </a>
+            <ul class="dropdown-menu shadow p-2">
+              <li><a href="department-details.html">Department Details</a></li>
+              <li><a href="service-details.html">Service Details</a></li>
+              <li><a href="testimonials.html">Testimonials</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="terms.html">Terms</a></li>
+              <li><a href="privacy.html">Privacy</a></li>
+              <li><a href="404.html">404</a></li>
+            </ul>
+          </li>
+
+          <!-- CONTACT -->
+          <li><a href="contact.html" class="text-dark text-decoration-none">Contact</a></li>
+
+        </ul>
+
+      </nav>
+
+      <!-- MOBILE ICON -->
+      <i class="mobile-nav-toggle d-xl-none bi bi-list fs-2"></i>
+
+    </div>
+  </div>
+
+</header>
+
+<style>
+  /* ===== BASE ===== */
+  .checkup-section{
+  padding:160px 0 80px;
+}
+
+  .glass-box {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 50px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+    transition: 0.4s ease;
+  }
+
+  .glass-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 50px rgba(13,110,253,0.15);
+  }
+
+  .title-main {
+    text-align: center;
+    margin-bottom: 50px;
+    animation: fadeDown 1s ease;
+  }
+
+  .title-main h2 {
+    color: #0d6efd;
+    font-weight: 800;
+    font-size: 40px;
+  }
+
+  .title-main p {
+    color: #6c757d;
+    font-size: 18px;
+  }
+
+  .dropdown:hover .dropdown-menu{
+  display:block;
+  margin-top:0;
+}
+
+  h3.section-title {
+    color: #0d6efd;
+    font-weight: 700;
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  h3.section-title::after {
+    content: "";
+    width: 60px;
+    height: 3px;
+    background: #0d6efd;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    border-radius: 5px;
+  }
+
+  .feature-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    border: 1px solid #eee;
+    transition: 0.3s;
+    height: 100%;
+  }
+
+  .feature-card:hover {
+    transform: scale(1.05);
+    border-color: #0d6efd;
+    box-shadow: 0 10px 25px rgba(13,110,253,0.15);
+  }
+
+  .feature-card h5 {
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+
+  .cta-box {
+    text-align: center;
+    margin-top: 50px;
+    animation: fadeUp 1.2s ease;
+  }
+
+  .btn-custom {
+    padding: 14px 35px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 18px;
+    transition: 0.3s;
+  }
+
+  .btn-custom:hover {
+    transform: scale(1.05);
+  }
+
+  /* ===== ANIMATIONS ===== */
+  @keyframes fadeDown {
+    from {opacity:0; transform: translateY(-30px);}
+    to {opacity:1; transform: translateY(0);}
+  }
+
+  @keyframes fadeUp {
+    from {opacity:0; transform: translateY(30px);}
+    to {opacity:1; transform: translateY(0);}
+  }
+
+  .fade-in {
+    animation: fadeUp 1s ease forwards;
+  }
+
+  .delay-1 { animation-delay: 0.2s; }
+  .delay-2 { animation-delay: 0.4s; }
+  .delay-3 { animation-delay: 0.6s; }
+
+  /* ===== EXTRA PRO ANIMATIONS ===== */
+
+.fade-in{
+  animation: fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp{
+  from {opacity:0; transform:translateY(30px);}
+  to {opacity:1; transform:translateY(0);}
+}
+
+/* hover effect improve */
+.feature-card:hover{
+  transform: translateY(-10px);
+  box-shadow:0 12px 30px rgba(13,110,253,0.2);
+}
+
+/* pulse icon effect */
+.icon-pulse{
+  display:inline-block;
+  animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+  0%{transform:scale(1);}
+  50%{transform:scale(1.2);}
+  100%{transform:scale(1);}
+}
+
+
+
+</style>
+
+<section class="checkup-section">
+
+  <div class="container glass-box">
+
+    <!-- TITLE -->
+    <div class="title-main" data-aos="fade-down">
+      <h2>General Checkup</h2>
+      <p>Advanced full-body health screening with expert medical care</p>
+    </div>
+
+    <!-- OVERVIEW -->
+    <div class="mb-5 fade-in" data-aos="fade-up">
+      <h3 class="section-title">Overview</h3>
+      <p>
+        Our General Checkup package provides complete body analysis for early detection of diseases and long-term health monitoring.
+      </p>
+      <p>
+        This service is ideal for students, professionals, and elderly patients.
+      </p>
+    </div>
+
+    <!-- FEATURES -->
+    <div class="mb-5">
+      <h3 class="section-title" data-aos="fade-right">What We Include</h3>
+
+      <div class="row g-4 mt-3">
+
+        <div class="col-md-6" data-aos="zoom-in">
+          <div class="feature-card">
+            <span class="icon-pulse">❤️</span>
+            <h5>Heart Rate Monitoring</h5>
+            <p>Tracks cardiovascular health.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6" data-aos="zoom-in">
+          <div class="feature-card">
+            <span class="icon-pulse">🩸</span>
+            <h5>Blood Pressure Check</h5>
+            <p>Accurate BP monitoring.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6" data-aos="zoom-in">
+          <div class="feature-card">
+            <span class="icon-pulse">🧪</span>
+            <h5>Blood Sugar Test</h5>
+            <p>Diabetes screening test.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6" data-aos="zoom-in">
+          <div class="feature-card">
+            <span class="icon-pulse">⚖</span>
+            <h5>BMI Analysis</h5>
+            <p>Body fitness evaluation.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- BENEFITS -->
+    <div class="mb-5" data-aos="fade-left">
+      <h3 class="section-title">Benefits</h3>
+      <ul>
+        <li>✔ Early disease detection</li>
+        <li>✔ Better health control</li>
+        <li>✔ Accurate reports</li>
+        <li>✔ Prevention of serious illness</li>
+      </ul>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-box" data-aos="fade-up">
+      <h4>Take control of your health today</h4>
+      <a href="appointment.html" class="btn btn-primary btn-custom">
+        Book Appointment Now
+      </a>
+    </div>
+
+  </div>
+
+</section>
+
+<footer id="footer" class="footer-16 footer position-relative dark-footer">
+
+  <div class="container">
+
+    <div class="footer-main" data-aos="fade-up" data-aos-delay="100">
+
+      <div class="row align-items-start">
+
+        <!-- Brand Section -->
+        <div class="col-lg-5">
+          <div class="brand-section">
+
+            <a href="index.html" class="logo d-flex align-items-center mb-4">
+              <span class="sitename">Healthcare</span>
+            </a>
+
+            <p class="brand-description">
+              Providing trusted medical care with advanced technology, expert doctors, and 24/7 emergency support for patients and families.
+            </p>
+
+            <div class="contact-info mt-5">
+
+              <div class="contact-item">
+                <i class="bi bi-geo-alt"></i>
+                <span>Karachi, Sindh, Pakistan</span>
+              </div>
+
+              <div class="contact-item">
+                <i class="bi bi-telephone"></i>
+                <span>+92 300 1234567</span>
+              </div>
+
+              <div class="contact-item">
+                <i class="bi bi-envelope"></i>
+                <span>info@healthcare.com</span>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+        <!-- About -->
+        <div class="col-6 col-lg-2">
+          <div class="nav-column">
+            <h6>About</h6>
+            <nav class="footer-nav">
+              <a href="#!">Our Mission</a>
+              <a href="#!">Doctors</a>
+              <a href="#!">Facilities</a>
+              <a href="#!">Care Quality</a>
+              <a href="#!">Reviews</a>
+            </nav>
+          </div>
+        </div>
+
+        <!-- Services -->
+        <div class="col-6 col-lg-2">
+          <div class="nav-column">
+            <h6>Services</h6>
+            <nav class="footer-nav">
+              <a href="#!">Checkup</a>
+              <a href="#!">Emergency</a>
+              <a href="#!">Surgery</a>
+              <a href="#!">Diagnostics</a>
+              <a href="#!">Pediatrics</a>
+            </nav>
+          </div>
+        </div>
+
+        <!-- Emergency -->
+        <div class="col-6 col-lg-3">
+          <div class="nav-column">
+            <h6>Emergency</h6>
+            <nav class="footer-nav">
+              <a href="tel:+923001234567">Call Emergency</a>
+              <a href="appointment.html">Book Appointment</a>
+              <a href="contact.html">Find Hospital</a>
+              <a href="#!">24/7 Support</a>
+              <a href="#!">Help Desk</a>
+            </nav>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bottom -->
+  <div class="footer-bottom dark-footer-bottom">
+    <div class="container">
+      <div class="bottom-content" data-aos="fade-up" data-aos-delay="300">
+        <div class="row align-items-center">
+
+          <div class="col-lg-6">
+            <div class="copyright">
+              <p>© <span class="sitename">Healthcare</span>. All Rights Reserved. | Emergency Care Available 24/7</p>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="legal-links">
+              <a href="#!">Privacy Policy</a>
+              <a href="#!">Terms</a>
+              <a href="#!">Emergency Policy</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+</script>
+
+</body>
+</html>
